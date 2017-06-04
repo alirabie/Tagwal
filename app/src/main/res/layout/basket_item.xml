@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+                android:background="@drawable/white_button"
+                android:layoutDirection="rtl"
+                >
+
+    <ImageView
+        android:id="@+id/basket_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nescafe"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:layout_toLeftOf="@+id/basket_img"
+        android:background="@color/lightGrey"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/view"
+        android:layoutDirection="rtl">
+
+        <TextView
+            android:id="@+id/basket_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img_delete"
+            android:gravity="right"
+            android:textColor="@color/grey"
+            android:maxLines="1"
+            android:text="نسكافيه موكا"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/close"/>
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/basket_name"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:textColor="@color/grey"
+            android:maxLines="1"
+            android:text="السعر :"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/basket_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/basket_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:layout_toLeftOf="@+id/txt1"
+            android:maxLines="1"
+            android:text="30"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/basket_price"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="عدد الوحدات "
+            android:textColor="@color/grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/basket_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/basket_price"
+            android:layout_toLeftOf="@+id/txt2"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="5"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/edit"
+            android:layout_below="@+id/basket_price"
+            android:layout_centerHorizontal="true"
+        />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/basket_price"
+            android:layout_toRightOf="@+id/basket_total"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:maxLines="1"
+            android:textColor="@color/grey"
+            android:text="الإجمالى : "
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/basket_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/basket_price"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="90 "
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"/>
+
+        
+        
+
+    </RelativeLayout>
+
+</RelativeLayout>

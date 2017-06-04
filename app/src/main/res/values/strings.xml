@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tagwal</string>
+    <string name="cardd">تفاصيل المنتج</string>
+    <string name="addedsuccesfuly">تم اضافة المنتج بنجاح</string>
+</resources>

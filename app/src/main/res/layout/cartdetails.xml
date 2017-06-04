@@ -1,0 +1,301 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/relAll"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="70dp"
+        android:background="@color/lightGrey"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/relsider"
+            android:background="@drawable/card_light_bg"
+            android:layout_width="match_parent"
+            android:layout_margin="7dp"
+            android:layout_height="wrap_content">
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_height="150dp"
+                />
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slider"
+                android:layout_centerHorizontal="true"
+                >
+                </com.daimajia.slider.library.Indicators.PagerIndicator>
+            <TextView
+                android:id="@+id/txtv1"
+                android:layout_below="@+id/custom_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/btn_press_color"/>
+            <TextView
+                android:id="@+id/tv_proName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="نسكافيه موكااااااااا"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtv1"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/btn_press_color"
+                android:textSize="12sp"
+                />
+            <RatingBar
+                android:id="@+id/proRate"
+                style="?attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_proName"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layoutDirection="rtl"
+                android:rating="3.3"
+                android:theme="@style/RatingBar"/>
+
+            <TextView
+                android:id="@+id/tv_proPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="333"
+                android:textColor="@color/black"
+                android:layout_below="@+id/tv_proName"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/tv_proPricename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/tv_proPrice"
+                android:layout_marginLeft="10dp"
+                android:text="السعر"
+                android:textColor="@color/colorPrimaryLight"
+                android:layout_below="@+id/tv_proName"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/lincustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/relsider"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/card_light_bg"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="البائع"
+                android:textColor="#e27438"/>
+
+            <TextView
+                android:id="@+id/tv_proSeller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="محمد احمد"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linDISC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/lincustomer"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/card_light_bg"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="الوصف"
+                android:textColor="#e27438"/>
+
+            <TextView
+                android:id="@+id/tv_proDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="قهوه سريعة الذوبان بالحليب مع السكر" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/linDISCdetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/linDISC"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/card_light_bg"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="المواصفات"
+                android:textColor="#e27438"/>
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:layout_below="@+id/txtdetails"
+                android:layout_marginTop="10dp"
+                android:text="الحجم" />
+            <TextView
+                android:id="@+id/dot2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/txt2"
+                android:text=" : "/>
+
+            <TextView
+                android:id="@+id/tv_proSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80dp"
+                android:layout_below="@+id/txtdetails"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/dot2"
+                android:textColor="@color/black"
+                android:text=" لا يوجد "/>
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt2"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="العلامة التجارية"/>
+
+            <TextView
+                android:id="@+id/dot3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt2"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/txt3"
+                android:gravity="right"
+                android:text=" : "/>
+
+            <TextView
+                android:id="@+id/tv_proMark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt2"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_toLeftOf="@+id/dot3"
+                android:gravity="center"
+                android:text=" لا يوجد "/>
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt3"
+                android:textColor="@color/black"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="الشكل"/>
+
+            <TextView
+                android:id="@+id/dot4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt3"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/txt4"
+                android:gravity="right"
+                android:text=" : "
+                />
+
+            <TextView
+                android:id="@+id/tv_proShape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt3"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/dot4"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text=" لا يوجد "/>
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt4"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:text="النوع"/>
+
+            <TextView
+                android:id="@+id/dot5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt4"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/txt5"
+                android:gravity="right"
+                android:text=" : "/>
+
+            <TextView
+                android:id="@+id/tv_proType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt4"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_toLeftOf="@+id/dot5"
+                android:gravity="center"
+                android:text=" لا يوجد "/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    </ScrollView>

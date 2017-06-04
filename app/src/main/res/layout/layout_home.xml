@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#e7e2e2"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginBottom="7.55dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/white_button"
+        android:layoutDirection="rtl">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:src="@android:drawable/ic_search_category_default"/>
+
+        <EditText
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/search_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/black"
+            android:hint="عن ماذا تبحث "
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"/>
+
+    </RelativeLayout>
+<TextView
+    android:id="@+id/txtnewproducts"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/relbar"
+    android:text="قائمة المنتجات الجديده"
+    android:textSize="16sp"
+    android:textColor="@color/grey"
+    android:layout_height="wrap_content" />
+
+    <GridView
+        android:id="@+id/grid_products"
+        android:layout_below="@+id/txtnewproducts"
+        android:layout_margin="10dp"
+        android:minHeight="150dp"
+        android:numColumns="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </GridView>
+    <TextView
+        android:id="@+id/txtfavproduct"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:text="قائمة المنتجات المختارة لك"
+        android:textSize="16sp"
+        android:layout_below="@+id/grid_products"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content" />
+    <GridView
+        android:id="@+id/grid_favproducts"
+        android:layout_below="@+id/txtfavproduct"
+        android:layout_margin="10dp"
+        android:numColumns="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </GridView>
+</RelativeLayout>
+</ScrollView>
