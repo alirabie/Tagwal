@@ -10,20 +10,21 @@
         android:background="@color/lightGrey"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="7dp">
         <RelativeLayout
             android:id="@+id/relsider"
             android:background="@drawable/card_light_bg"
             android:layout_width="match_parent"
             android:layout_margin="7dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:layout_alignParentTop="true"
-                android:layout_height="150dp"
-                />
+                android:layout_height="150dp"/>
             <com.daimajia.slider.library.Indicators.PagerIndicator
                 android:id="@+id/custom_indicator"
                 android:layout_width="wrap_content"
@@ -42,14 +43,14 @@
                 android:id="@+id/tv_proName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:text="نسكافيه موكااااااااا"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/txtv1"
-                android:layout_marginRight="10dp"
                 android:textColor="@color/btn_press_color"
                 android:textSize="12sp"
-                />
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:gravity="start" />
             <RatingBar
                 android:id="@+id/proRate"
                 style="?attr/ratingBarStyleSmall"
@@ -80,9 +81,21 @@
                android:layout_toRightOf="@+id/tv_proPrice"
                 android:layout_marginLeft="10dp"
                 android:text="السعر"
-                android:textColor="@color/colorPrimaryLight"
+                android:textColor="#e27438"
                 android:layout_below="@+id/tv_proName"
                 android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="7 تقييمات"
+                android:id="@+id/votes_num"
+                android:layout_below="@+id/proRate"
+                android:layout_alignParentEnd="true"
+                android:textColor="#e27438"
+                android:textSize="10dp"
+                android:padding="3dp" />
         </RelativeLayout>
         <LinearLayout
             android:id="@+id/lincustomer"

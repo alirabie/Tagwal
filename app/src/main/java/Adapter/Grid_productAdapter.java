@@ -186,7 +186,7 @@ public class Grid_productAdapter extends ArrayAdapter  {
                     tv_proName.setText(response.body().getName());
                     Log.d("CODE", response.body().getName());
                     tv_proDesc.setText(response.body().getDescription());
-                    tv_proPrice.setText(" السعر : "+String.valueOf(response.body().getCost()));
+                    tv_proPrice.setText(String.valueOf(response.body().getCost()));
                     tv_proSeller.setText(response.body().getShopName());
                 } else {
                     Log.d("CODE", response.code() + "");
