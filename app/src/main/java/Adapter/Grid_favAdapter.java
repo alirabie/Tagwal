@@ -72,7 +72,7 @@ public class Grid_favAdapter extends ArrayAdapter {
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PRODUCT_SUGAR p_model = new PRODUCT_SUGAR(studentListold.get(position).getProductID(),studentListold.get(position).getName(),studentListold.get(position).getCost(),studentListold.get(position).getDescription());
+                PRODUCT_SUGAR p_model = new PRODUCT_SUGAR(studentListold.get(position).getProductID(),studentListold.get(position).getName(),studentListold.get(position).getCost(),studentListold.get(position).getDescription(),1);
                 List<PRODUCT_SUGAR> authors = p_model.find(PRODUCT_SUGAR.class, "itemid = ?", String.valueOf(studentListold.get(position).getProductID()));
                 /*if (authors.size()==0){
 

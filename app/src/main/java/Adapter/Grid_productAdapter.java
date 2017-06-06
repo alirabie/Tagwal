@@ -94,14 +94,19 @@ public class Grid_productAdapter extends ArrayAdapter  {
                             studentListold.get(position).getProductID(),
                             studentListold.get(position).getName(),
                             studentListold.get(position).getCost(),
-                            studentListold.get(position).getDescription());
+                            studentListold.get(position).getDescription(),1);
                     p_model.save();
                     Toast.makeText(context, context.getResources().getString(R.string.addedsuccesfuly), Toast.LENGTH_LONG).show();
 
                 }else {
-                    Toast.makeText(getContext(),"Item existed !! ",Toast.LENGTH_LONG).show();
+
+                    //List<PRODUCT_SUGAR> existed=PRODUCT_SUGAR.find(PRODUCT_SUGAR.class,"itemid = ?",studentListold.get(position).getProductID()+"");
+                    authors.get(0).setQuantity(authors.get(0).getQuantity()+1);
+                    authors.get(0).save();
                     //do update on existing item count
+                    Toast.makeText(context, context.getResources().getString(R.string.addedsuccesfuly), Toast.LENGTH_LONG).show();
                 }
+
 
                         }
 

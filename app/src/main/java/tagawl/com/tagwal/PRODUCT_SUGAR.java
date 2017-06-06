@@ -16,11 +16,12 @@ public class PRODUCT_SUGAR extends SugarRecord {
 
     }
 
-    public PRODUCT_SUGAR(int itemid,String name,Double price,String description){
+    public PRODUCT_SUGAR(int itemid,String name,Double price,String description,Integer quantity){
         this.itemid = itemid;
         this.name=name;
         this.price = price;
         this.description = description;
+        this.quantity=quantity;
     }
 
     public Integer getItemid() {

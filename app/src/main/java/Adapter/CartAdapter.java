@@ -66,7 +66,9 @@ public class CartAdapter extends ArrayAdapter {
         findViewsId();
         basket_name.setText(CART_LIST.get(position).getName());
         basket_price.setText(String.valueOf(CART_LIST.get(position).getPrice()));
-        basket_quantity.setText(String.valueOf(CART_LIST.get(position).getQuantity()));
+        basket_quantity.setText(String.valueOf(CART_LIST.get(position).getQuantity())+"");
+
+        Log.e("cart adb q",String.valueOf(CART_LIST.get(position).getQuantity()));
 
         img_delete.setOnClickListener(new View.OnClickListener() {
             @Override

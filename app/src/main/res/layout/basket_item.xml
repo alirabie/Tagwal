@@ -100,7 +100,8 @@
             android:gravity="right"
             android:maxLines="1"
             android:text="5"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary" />
 
         <ImageView
             android:id="@+id/edit"
