@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -10,8 +11,7 @@
         android:background="@color/lightGrey"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="7dp">
+        android:layout_height="match_parent">
         <RelativeLayout
             android:id="@+id/relsider"
             android:background="@drawable/card_light_bg"
@@ -19,12 +19,16 @@
             android:layout_margin="7dp"
             android:layout_height="wrap_content"
             android:padding="10dp">
+
+
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:layout_alignParentTop="true"
-                android:layout_height="150dp"/>
+                android:layout_height="150dp"
+                />
+
             <com.daimajia.slider.library.Indicators.PagerIndicator
                 android:id="@+id/custom_indicator"
                 android:layout_width="wrap_content"
@@ -306,7 +310,24 @@
                 android:layout_toLeftOf="@+id/dot5"
                 android:gravity="center"
                 android:text=" لا يوجد "/>
+
         </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/footertabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            android:background="@color/white"
+            android:textAlignment="center"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/linDISCdetail"
+            android:layout_marginTop="10dp"
+            style="@style/CustomTabLayoutStyle">
+          </android.support.design.widget.TabLayout>
 
 
     </RelativeLayout>

@@ -2,8 +2,10 @@ package ConstantClasss;
 
 import java.util.List;
 
+import MODEL.Area;
 import MODEL.WishlistModel;
 import MODEL.productDetailmodel;
+import retrofit2.http.Headers;
 import tagawl.com.tagwal.AllProduct;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -19,5 +21,8 @@ public interface Idealinterface {
     Call<List<WishlistModel>>GetwishlistProducts(@Body Object data);
     @POST("GetProductDetails")
     Call<productDetailmodel>Getproducrdetails(@Body Object data);
+
+    @POST("GetAreas")
+    Call<List<Area>>GetAreas();
 
 }

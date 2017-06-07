@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -24,7 +25,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Adapter.CartAdapter;
+import ConstantClasss.Constanturl;
+import ConstantClasss.Idealinterface;
 import Fragments.FragmentHome;
+import MODEL.Area;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class NavDrawerActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -57,6 +64,49 @@ public class NavDrawerActivity extends ActionBarActivity implements View.OnClick
                     mDrawer.openDrawer(sideMenu);
             }
         });
+
+
+
+
+        Constanturl.createService(Idealinterface.class).GetAreas().enqueue(new Callback<List<Area>>() {
+            @Override
+            public void onResponse(Call<List<Area>> call, Response<List<Area>> response) {
+
+                if (response.isSuccessful()) {
+
+                    Log.e("Success", response.code() + " ");
+
+
+                } else {
+                    Log.e("Not Success", response.code() + " "+response.message()+" "+response.errorBody().toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Area>> call, Throwable t) {
+
+                Log.e("Failure",t.getMessage() + "");
+            }
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private void findViewsById() {

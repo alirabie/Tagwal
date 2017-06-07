@@ -2,9 +2,11 @@ package Adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +56,7 @@ public class Grid_productAdapter extends ArrayAdapter  {
     Context context;
     SliderLayout Slider_Item;
     ACProgressFlower dialog;
+    TabLayout foterTabs;
 
     public Grid_productAdapter(Context context, List<AllProduct> studentListold){
         super(context, R.layout.layout_gridproducts, studentListold);
@@ -128,6 +131,36 @@ public class Grid_productAdapter extends ArrayAdapter  {
         tv_proSeller =(TextView)dialogBuildercard.findViewById(R.id.tv_proSeller) ;
         tv_proDesc =(TextView)dialogBuildercard.findViewById(R.id.tv_proDesc) ;
         Slider_Item = (SliderLayout) dialogBuildercard.findViewById(R.id.slider);
+        foterTabs=(TabLayout)dialogBuildercard.findViewById(R.id.footertabs);
+        foterTabs.setSelectedTabIndicatorColor(Color.GRAY);
+        foterTabs.addTab(foterTabs.newTab().setText("اشترى الان"),0);
+        foterTabs.addTab(foterTabs.newTab().setIcon(R.drawable.ratetab).setText("قييم المنتج"),1);
+        foterTabs.addTab(foterTabs.newTab().setIcon(R.drawable.addcarttab).setText("أضف الى السلة"),2);
+        foterTabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getPosition() == 0) {
+                    Log.e("Tab1 :", "Add to cart action");
+                    //Do its action
+                } else if (tab.getPosition() == 1) {
+                    Log.e("Tab1 :", "Rate action");
+                    //Do its action
+                } else {
+                    Log.e("Tab1 :", "Order Now action");
+                    //Do its action
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         HashMap<String,String> url_maps = new HashMap<String, String>();
         url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
